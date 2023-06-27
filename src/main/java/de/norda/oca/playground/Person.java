@@ -1,4 +1,4 @@
-package de.lubowiecki.oca.playground;
+package de.norda.oca.playground;
 
 // VO = Value Object, Datenklasse
 public class Person {

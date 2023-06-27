@@ -1,4 +1,4 @@
-package de.lubowiecki.oca.playground;
+package de.norda.oca.playground;
 
 // Alle Klassen aus java.lang sind automatisch importiert
 
