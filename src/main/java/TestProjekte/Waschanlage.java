@@ -28,11 +28,41 @@ public class Waschanlage {
 
     public static class WaschAnlage {
         private static final String[] importantInfo = {
+
                 ".20%",
                 "..47%",
                 "...69%",
                 "....100%"
         };
+
+        public static void CarDirty() {
+            String[] car = {
+                    "  ______            W|W",
+                    " /|_||_\\`.__        W|W",
+                    "(   _    _ _\\       W|W",
+                    "=`-(_)--(_)-'       W|W",
+                    "*********************|***",
+            };
+
+            for (String line : car) {
+                System.out.println(line);
+            }
+        }
+
+        public static void CarClean() {
+            String[] car = {
+                    " W|W         ______",
+                    " W|W        /|_||_\\`.__",
+                    " W|W       (   _    _ _\\",
+                    " W|W       =`-(_)--(_)-' ",
+                    "**|**********************",
+            };
+
+            for (String line : car) {
+                System.out.println(line);
+            }
+            System.out.println("Das Fahrzeug ist nun sauber.");
+        }
 
         private static void sleeper(int sleep) throws InterruptedException {
             Thread.sleep(sleep);
@@ -46,6 +76,9 @@ public class Waschanlage {
                 sleeper(1150);
                 System.out.println(s);
             }
+            WaschAnlage.CarDirty();
+            sleeper(5000);
+            WaschAnlage.CarClean();
         }
 
         // Deine anderen Methoden können auf "importantInfo" zugreifen
