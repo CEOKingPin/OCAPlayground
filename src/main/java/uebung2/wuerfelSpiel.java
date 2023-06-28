@@ -3,16 +3,16 @@ package uebung2;
 import java.util.Arrays;
 import java.util.Random;
 
-public class würfelSpiel {
+public class wuerfelSpiel {
 
     static Random rand = new Random();
 
-    public static int würfeln() {
+    public static int wuerfeln() {
         int zufallszahl = rand.nextInt(6) + 1;
         return zufallszahl;
     }
 
-    public static int[] mehrereWürfel() {
+    public static int[] mehrereWuerfel() {
         int[] arr = new int[6];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(6) + 1;
@@ -21,7 +21,7 @@ public class würfelSpiel {
         return arr;
     }
 
-    public static void zähler(int[] arr) {
+    public static void zaehler(int[] arr) {
         int[] counts = new int[6];
         for (int i = 0; i < arr.length; i++) {
             counts[arr[i] - 1]++;
@@ -34,7 +34,7 @@ public class würfelSpiel {
         System.out.println();
     }
 
-    public static int[] Würfel10() {
+    public static int[] Wuerfel10() {
         int[] arr = new int[6];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(6) + 1;
@@ -43,7 +43,7 @@ public class würfelSpiel {
         return arr;
     }
 
-    public static int[] Würfel100() {
+    public static int[] Wuerfel100() {
         int[] arr = new int[6];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(6) + 1;
@@ -53,13 +53,13 @@ public class würfelSpiel {
     }
 
     public static void main(String[] args) {
-        System.out.println("Deine Zahl: " + würfeln());
-        int[] arr = mehrereWürfel();
+        System.out.println("Deine Zahl: " + wuerfeln());
+        int[] arr = mehrereWuerfel();
         System.out.println();
         System.out.println("Alle Würfe: " + Arrays.toString(arr));
-        zähler(arr);
+        zaehler(arr);
         System.out.println();
-        System.out.println("10er Würfel: " + Arrays.toString(Würfel10()));
-        System.out.println("100er Würfel: " + Arrays.toString(Würfel100()));
+        System.out.println("10er Würfel: " + Arrays.toString(Wuerfel10()));
+        System.out.println("100er Würfel: " + Arrays.toString(Wuerfel100()));
     }
 }
