@@ -42,9 +42,9 @@ public class Brettspiel {
 
     private static void links(int[][] feld){
         if (posy - 1 >= 0) {
-            feld[posx][posy] = 0;
+            feld[posx][posy] = 0; //alte position auf 0 ändern
             posy--;
-            feld[posx][posy] = 7;
+            feld[posx][posy] = 7; // neue position
         }
     }
 
