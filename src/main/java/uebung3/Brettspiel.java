@@ -21,18 +21,10 @@ public class Brettspiel {
             if(eingabe.equals("exit")) break;
             for (char bewegung : eingabe.toCharArray()) {
                 switch (bewegung) {
-                    case 'a':
-                        links(feld);
-                        break;
-                    case 'd':
-                        rechts(feld);
-                        break;
-                    case 'w':
-                        oben(feld);
-                        break;
-                    case 's':
-                        unten(feld);
-                        break;
+                    case 'a' -> links(feld);
+                    case 'd' -> rechts(feld);
+                    case 'w' -> oben(feld);
+                    case 's' -> unten(feld);
                 }
             }
         }
@@ -40,9 +32,9 @@ public class Brettspiel {
     }
 
     private static void show(int[][] feld){
-        for(int i = 0;i < feld.length;i++){
-            for(int j = 0; j < feld[i].length; j++){
-                System.out.print(feld[i][j] + " ");
+        for (int[] ints : feld) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }
