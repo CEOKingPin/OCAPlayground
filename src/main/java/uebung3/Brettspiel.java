@@ -28,7 +28,6 @@ public class Brettspiel {
                 }
             }
         }
-
     }
 
     private static void show(int[][] feld){
@@ -71,5 +70,4 @@ public class Brettspiel {
             feld[posx][posy] = 7;
         }
     }
-
 }
