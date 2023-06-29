@@ -21,7 +21,7 @@ public class BrettspielOptimiert {
             while(true) {
                 show();
                 System.out.println("Welche Richtung ? w,a,s,d");
-                String eingabe = sc.nextLine();
+                String eingabe = sc.nextLine().toLowerCase();
                 if(eingabe.equals("exit")) break;
                 for (char bewegung : eingabe.toCharArray()) {
                     switch (bewegung) {

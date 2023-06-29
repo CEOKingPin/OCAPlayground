@@ -2,7 +2,7 @@ package uebung3;
 
 import java.util.Scanner;
 public class Brettspiel {
-    // Standard Position des Roboters beim start
+    // Standard Position Mr.7
     static int posx = 4;
     static int posy = 4;
 
@@ -10,14 +10,14 @@ public class Brettspiel {
         // Spielfeldgröße
         int[][] feld = new int[10][10];
 
-        //Roboter icon
-        feld[posx][posy] = 7;
+        //Mr.7 icon
+        feld[posx][posy] = 7;//Mr.7
 
         Scanner sc = new Scanner(System.in);
         while(true){
             show(feld);
             System.out.println("Welche Richtung ? w,a,s,d");
-            String eingabe = sc.nextLine();
+            String eingabe = sc.nextLine().toLowerCase();
             if(eingabe.equals("exit")) break;
             for (char bewegung : eingabe.toCharArray()) {
                 switch (bewegung) {
@@ -40,7 +40,7 @@ public class Brettspiel {
     }
 
     private static void links(int[][] feld){
-        if (posy - 1 >= 0) {
+        if (posy - 1 >= 0) { // überprüfen ob außerhalb der map
             feld[posx][posy] = 0; //alte position auf 0 ändern
             posy--;
             feld[posx][posy] = 7; // neue position
