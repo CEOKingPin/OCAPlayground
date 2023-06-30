@@ -1,4 +1,4 @@
-package TestProjekte;
+package TestProjekte.WaschAnlage;
 
 import java.util.Scanner;
 public class Waschanlage {
